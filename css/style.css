@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  background: #000;
+  width: 100%;
+  height: 100%;
+}
+
+.topindex {
+  z-index: 10000;
+}
+
+.video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.panel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+#panel0 {
+  background: url(../images/p0.jpg);
+  background-size: 100% 100%;
+}
+
+#panel1 {
+  background: url(../images/p1.jpg);
+  background-size: 100% 100%;
+}
+
+#panel2 {
+  background: url(../images/p2.jpg);
+  background-size: 100% 100%;
+}
+
+#panel3 {
+  background: url(../images/p3.jpg);
+  background-size: 100% 100%;
+}
+
+#panel4 {
+  background: url(../images/p4.jpg);
+  background-size: 100% 100%;
+}
+
+#panel5 {
+  background: url(../images/p5.jpg);
+  background-size: 100% 100%;
+}
+
+#panel6 {
+  background: url(../images/p6.jpg);
+  background-size: 100% 100%;
+}
+
+#panel7 {
+  background: url(../images/p7.jpg);
+  background-size: 100% 100%;
+}
+
+#panel8 {
+  background: url(../images/p8.jpg);
+  background-size: 100% 100%;
+}
+
+#panel9 {
+  background: url(../images/p9.jpg);
+  background-size: 100% 100%;
+}
+
+#panel10 {
+  background: url(../images/p10.jpg);
+  background-size: 100% 100%;
+}
+
+.panel-btn, .panel-txt {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}

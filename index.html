@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>沉浸式体验</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-touch-fullscreen" content="YES" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/jquery.js"></script>
+</head>
+
+<body>
+  <video id="demo" class="video" preload="auto" x-webkit-airplay="true" playsinline="" x5-video-player-type="h5" width="100%" src="./demo.mp4"></video>
+  <div id="panel0" class="panel" style="display:block;">
+    <img id="pbtn0" class="panel-btn" src="./images/p0.1.png">
+  </div>
+  <div id="panel1" class="panel">
+    <img class="panel-txt" src="./images/p1.1.png">
+    <img id="pbtn1" class="panel-btn" src="./images/p1.2.png">
+  </div>
+  <div id="panel2" class="panel">
+    <img class="panel-txt" src="./images/p2.1.png">
+    <img id="pbtn2" class="panel-btn" src="./images/p2.2.png">
+  </div>
+  <div id="panel3" class="panel">
+    <img class="panel-txt" src="./images/p3.1.png">
+    <img id="pbtn4" class="panel-btn" src="./images/p4.2.png">
+  </div>
+  <div id="panel4" class="panel">
+    <img class="panel-txt" src="./images/p4.1.png">
+    <img id="pbtn5" class="panel-btn" src="./images/p4.2.png">
+  </div>
+  <div id="panel5" class="panel">
+    <img class="panel-txt" src="./images/p5.1.png">
+    <img id="pbtn5" class="panel-btn" src="./images/p5.2.png">
+  </div>
+  <div id="panel6" class="panel">
+    <img class="panel-txt" src="./images/p6.1.png">
+    <img class="panel-txt" src="./images/p6.2.png">
+    <img id="pbtn6" class="panel-btn" src="./images/p6.3.png">
+  </div>
+  <div id="panel7" class="panel">
+    <img class="panel-txt" src="./images/p7.1.png">
+    <img id="pbtn7" class="panel-btn" src="./images/p7.2.png">
+  </div>
+  <div id="panel8" class="panel">
+    <img class="panel-txt" src="./images/p8.1.png">
+    <img id="pbtn8" class="panel-btn" src="./images/p8.2.png">
+  </div>
+  <div id="panel9" class="panel">
+    <img class="panel-txt" src="./images/p9.1.png">
+    <img id="pbtn9" class="panel-btn" src="./images/p9.2.png">
+  </div>
+  <div id="panel10" class="panel">
+    <img class="panel-txt" src="./images/p10.1.png">
+  </div>
+</body>
+
+</html>
+<script>
+  var demo = document.getElementById('demo');
+  var $demo=$('#demo');
+  var $panel1=$('#panel1');
+  var $panel2=$('#panel2');
+  var $panel3=$('#panel3');
+  var $panel4=$('#panel4');
+  var $panel5=$('#panel5');
+  var $panel6=$('#panel6');
+  var $panel7=$('#panel7');
+  var $panel8=$('#panel8');
+  var $panel9=$('#panel9');
+  var $panel10=$('#panel10');
+  $('.panel-btn').click(function() {
+    $(this).parent().fadeOut();
+    demoPlay();
+  });
+  function demoPause(){
+    demo.pause();
+    $demo.removeClass('topindex');
+  }
+  function demoPlay(){
+    demo.play();
+    $demo.addClass('topindex');
+  }
+  demo.ontimeupdate=function(){
+    var currentTime=demo.currentTime;
+    console.log(currentTime);
+    if(currentTime >=22.5 && currentTime <=22.7){
+      demoPause();
+      $panel1.fadeIn();
+    }else if(currentTime >=32.5 && currentTime <=32.7){
+      demoPause();
+      $panel2.fadeIn();
+    }
+    else if(currentTime >=41.8 && currentTime <=42.0){
+      demoPause();
+      $panel3.fadeIn();
+    }
+    else if(currentTime >=49.0 && currentTime <=49.2){
+      demoPause();
+      $panel4.fadeIn();
+    }else if(currentTime >=64.0 && currentTime <=64.2){
+      demoPause();
+      $panel5.fadeIn();
+    }else if(currentTime >=83.0 && currentTime <=83.2){
+      demoPause();
+      $panel6.fadeIn();
+    }else if(currentTime >=105.0 && currentTime <=105.2){
+      demoPause();
+      $panel7.fadeIn();
+    }else if(currentTime >=121.0 && currentTime <=121.2){
+      demoPause();
+      $panel8.fadeIn();
+    }else if(currentTime >=143.0 && currentTime <=143.2){
+      demoPause();
+      $panel9.fadeIn();
+    }else if(demo.ended){
+      demoPause();
+      $panel10.fadeIn();
+    }
+  }
+</script>
